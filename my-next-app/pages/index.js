@@ -8,6 +8,7 @@ import MainContent from '../components/MainContent';
 import ConditionalRendering from '../components/ConditionalRendering';
 import FormSubmission from '../components/FormSubmission';
 import ToggleVisibility from '../components/ToggleVisibility';
+import Counter from "../components/Counter";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -46,6 +47,7 @@ export default function Home() {
           <ConditionalRendering />
           <FormSubmission />
           <ToggleVisibility />
+          <Counter />
           </div>
           
 
