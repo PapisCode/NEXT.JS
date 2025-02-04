@@ -5,6 +5,8 @@ import styles from "@/styles/Home.module.css";
 import React from 'react';
 import Header from '../components/Header';
 import MainContent from '../components/MainContent';
+import ConditionalRendering from '../components/ConditionalRendering';
+import FormSubmission from '../components/FormSubmission';
 import ToggleVisibility from '../components/ToggleVisibility';
 
 const geistSans = Geist({
@@ -40,7 +42,12 @@ export default function Home() {
             content="React makes it painless to create interactive UIs and is widely used in the industry." 
           />
           
+          <div>
+          <ConditionalRendering />
+          <FormSubmission />
           <ToggleVisibility />
+          </div>
+          
 
           <Image
             className={styles.logo}
