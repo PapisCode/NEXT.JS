@@ -2,6 +2,9 @@ import Head from "next/head";
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import styles from "@/styles/Home.module.css";
+import React from 'react';
+import Header from '../components/Header';
+import MainContent from '../components/MainContent';
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -26,6 +29,16 @@ export default function Home() {
         className={`${styles.page} ${geistSans.variable} ${geistMono.variable}`}
       >
         <main className={styles.main}>
+        <Header />
+          <MainContent 
+            title="About React" 
+            content="React is a JavaScript library for building user interfaces." 
+          />
+          <MainContent 
+            title="Why Learn React?" 
+            content="React makes it painless to create interactive UIs and is widely used in the industry." 
+          />
+          
           <Image
             className={styles.logo}
             src="/next.svg"
