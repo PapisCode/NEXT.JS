@@ -4,10 +4,10 @@ export default function ConditionalRendering() {
     const [filter, setFilter] = useState("active");
 
     const items = [
-        {id: 1, name: "Item 1", status: "active"},
-        {id: 2, name: "Item 2", status: "inactive"},
-        {id: 3, name: "Item 3", status: "active"},
-        {id: 4, name: "Item 4", status: "inactive"},
+        {id: 1, name: "Kali Linux", status: "active"},
+        {id: 2, name: "Hack The Box", status: "inactive"},
+        {id: 3, name: "Adv. Front End Programming", status: "active"},
+        {id: 4, name: "Terminal", status: "inactive"},
     ];
 
     const filteredItems = items.filter((items) => items.status === filter);
