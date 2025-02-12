@@ -9,6 +9,7 @@ import ConditionalRendering from '../components/ConditionalRendering';
 import FormSubmission from '../components/FormSubmission';
 import ToggleVisibility from '../components/ToggleVisibility';
 import Counter from "../components/Counter";
+import ItemList from "../components/ItemList";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
