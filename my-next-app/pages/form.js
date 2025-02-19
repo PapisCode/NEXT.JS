@@ -4,7 +4,7 @@ export default function Form() {
     const [name, setName] = useState("");
     const [email, setEmail] = useState("");
     const passwordRef = useRef();
-    const [error, setErrors] = useState({});
+    const [errors, setErrors] = useState({});
 
     const validateForm = () => {
         const newErrors = {};
