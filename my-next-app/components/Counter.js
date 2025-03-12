@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useContext} from 'react';
 import { CounterContext } from "../context/CounterProvider";
 import DisplayCount from "./DisplayCount";
 import Controls from "./Controls";
