@@ -1,13 +1,16 @@
 import React, { useState} from 'react';
+import { CounterContext } from "../context/CounterProvider";
+import DisplayCount from "./DisplayCount";
+import Controls from "./Controls";
 
 const Counter = () => {
-    const [count, setCount] = useState(0);
+    const { count } = useContext(CounterContext);
 
     return (
-        <div>
-            <h1>Counter: {count}</h1>
-            <button onClick={() => setCount(count + 1)}>Increment</button>
-            <button onClick={() => setCount(count - 1)}>Decrement</button>
+        <div style={{textAlign: "center", padding: "20px", border: "1px solid black"}}>
+            <h2>Counter Component</h2>
+            <DisplayCount />
+            <Controls />
         </div>
     );
 };
