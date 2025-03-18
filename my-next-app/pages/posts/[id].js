@@ -9,7 +9,7 @@ const Post = () => {
         <div>
             <h1>Post ID: {id}</h1>
             <Link href={`/posts/${id}/comments`}>
-            <a>View Comments</a>
+            View Comments
             </Link>
         </div>
     );
