@@ -8,7 +8,7 @@ const Post = () => {
     return (
         <div>
             <h1>Post ID: {id}</h1>
-            <Link href={`/posts/${id}.js`}>
+            <Link href={`/posts/${id}/comments`}>
             <a>View Comments</a>
             </Link>
         </div>
