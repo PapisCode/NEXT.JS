@@ -3,7 +3,6 @@ import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import styles from "@/styles/Home.module.css";
 import React, { Suspense, lazy } from 'react';
-import React from 'react';
 import Header from '../components/Header';
 import MainContent from '../components/MainContent';
 import ConditionalRendering from '../components/ConditionalRendering';
