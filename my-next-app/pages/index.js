@@ -10,6 +10,9 @@ import FormSubmission from '../components/FormSubmission';
 import ToggleVisibility from '../components/ToggleVisibility';
 import Counter from "../components/Counter";
 import ItemList from "../components/ItemList";
+import TabGroup from "../components/TabGroup";
+
+const HeavyDetails = lazy(() => import('../components/HeavyDetails'));
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -51,6 +54,28 @@ export default function Home() {
           <Counter />
           <ItemList />
           </div>
+
+          /*Lab 10 content below */
+          <section style={{marginTop: '40px'}}>
+            <h2>Lab 10: TabGroup + Dynamic Import</h2>
+            <TabGroup>
+              <TabGroup.Tab index={0}>Intro</TabGroup.Tab>
+              <TabGroup.Tab index={1}>Dynamic</TabGroup.Tab>
+              <TabGroup.Tab index={2}>Final</TabGroup.Tab>
+
+              <TabGroup.TabPanel index={0}>
+                Welcome to the TabGroup component!
+              </TabGroup.TabPanel>
+              <TabGroup.TabPanel index={1}>
+                <Suspense fallback={<p>Loading Heavy Component...</p>}>
+                <HeavyDetails />
+                </Suspense>
+              </TabGroup.TabPanel>
+              <TabGroup.TabPanel index={2}>
+                Congrats! You've reached the final tab!
+              </TabGroup.TabPanel>
+            </TabGroup>
+          </section>
           
 
           <Image
