@@ -29,18 +29,28 @@ const TeamSearch = () => {
             {teamData && (
                 <div style={{ marginTop: '2rem' }}>
                     <h3>{teamData.strTeam}</h3>
-                    <img src={teamData.strTeamBadge} alt="Team badge" width="100" />
+                    {teamData.strTeamBade ? (
+                        <img
+                        src={teamData.strTeamBadge}
+                        alt={`${teamData.strTeam} badge`}
+                        width="100"
+                        onError={(e) => {
+                            e.target.onerror = null;
+                            e.target.src = '/placeholder.png';
+                        }}
+                        />
+                    ) : (
+                        <p>No team badge available</p>
+                    )}
+                    
                     <p><strong>Stadium:</strong> {teamData.strStadium}</p>
                     <p><strong>Location:</strong> {teamData.strStadiumLocation}</p>
                     <p>{teamData.strDescriptionEN?.substring(0, 300)}...</p>
         </div>
     )}
-
-{teamData === null && team && (
-        <p>No results found for "{team}"</p>
-      )}
     </div>
-  );
+    );
 };
+
 
 export default TeamSearch;
