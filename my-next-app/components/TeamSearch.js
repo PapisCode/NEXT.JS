@@ -29,7 +29,7 @@ const TeamSearch = () => {
             {teamData && (
                 <div style={{ marginTop: '2rem' }}>
                     <h3>{teamData.strTeam}</h3>
-                    {teamData.strTeamBade ? (
+                    {teamData.strTeamBadge ? (
                         <img
                         src={teamData.strTeamBadge}
                         alt={`${teamData.strTeam} badge`}
