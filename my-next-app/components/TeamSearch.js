@@ -8,6 +8,8 @@ const TeamSearch = () => {
     const fetchTeam = async () => {
         const res = await fetch (`https://www.thesportsdb.com/api/v1/json/3/searchteams.php?t=${team}`);
         const data = await res.json();
+        console.log("Full API response:, data");
+        console.log("Badge URL:", data.teams?.[0]?.strTeamBadge);
         setTeamData(data.teams ? data.teams[0] : null);
     };
 
@@ -29,12 +31,14 @@ const TeamSearch = () => {
             {teamData && (
                 <div style={{ marginTop: '2rem' }}>
                     <h3>{teamData.strTeam}</h3>
+
                     {teamData.strTeamBadge ? (
                         <img
-                        src={teamData.strTeamBadge}
+                        src={teamData.strTeamBadge.replace('http://', 'https://')}
                         alt={`${teamData.strTeam} badge`}
                         width="100"
                         onError={(e) => {
+                            console.log("Image failed to load:", e.target.src);
                             e.target.onerror = null;
                             e.target.src = '/placeholder.png';
                         }}
